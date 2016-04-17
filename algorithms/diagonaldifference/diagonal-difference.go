@@ -12,7 +12,7 @@ import (
 func main() {
 	arr, nValInt := getInput()
 	diff := diagonalDifference(arr, nValInt)
-	fmt.Print(diff)
+	fmt.Println(diff)
 	// Calculates diagonal difference
 }
 
@@ -21,12 +21,8 @@ func diagonalDifference(arr [][]int, nValInt int) int {
 	var rightDiagSum int
 	for i := 0; i < nValInt; i++ {
 		leftDiagSum += arr[i][i]
-		fmt.Println(arr[i][i])
 		rightDiagSum += arr[nValInt-i-1][i]
-		fmt.Println(arr[nValInt-i-1][nValInt-i-1])
 	}
-	fmt.Println(rightDiagSum)
-	fmt.Println(leftDiagSum)
 	return (leftDiagSum - rightDiagSum)
 }
 
